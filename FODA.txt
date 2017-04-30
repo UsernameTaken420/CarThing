@@ -1,20 +1,25 @@
-F
+Análisis FODA
+Por medio de este documento haremos el análisis FODA(Fortalezas, Oportunidades, Debilidades, Amenazas) de nuestro grupo y del producto que dará como resultado el proyecto.
+El FODA nos permitirá analizar la situación de nuestra empresa y proyecto, permitiéndonos conocer tanto características internas (fortalezas y debilidades) como externas (oportunidades y amenazas).
+
+Fortalezas
 -Costos bajos
 -Confianza entre los miembros del equipo
--Grupo facil de coordinar
+-Grupo fácil de coordinar
 
-O
--Un producto util en el mercado actual
+Oportunidades
+-Un producto útil en el mercado actual
 -Producto para un mercado no explotado
--Gran potencial para exandirse en diferentes areas
+-Gran potencial para expandirse en diferentes áreas
 
-D
+Debilidades
 -Inexperiencia
--Poco conocimiento de la tecnologia requerida
+-Poco conocimiento de la tecnología requerida
 -La productividad del programa puede resultar muy
-dependiente en la epoca del a�o
+dependiente en la época del ańo
+-Necesidad de utilizar conocimientos que no poseemos y que obtendremos a lo largo del año
 
-A
+Amenazas
 -Mercado desconocido
 -Posibles competidores con mayor experiencia y
 tecnologia 
