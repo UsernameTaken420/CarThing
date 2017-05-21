@@ -35,22 +35,12 @@ case $tipoUser in
 				esac
 				echo “Ingrese una clave para el usuario”
 				read -s contra
-
 				echo “Esta seguro de que desea crear el usuario ’$username’?”
 				echo “0- No”
 				echo “1- Si”
 				read conf
 				if [ “$conf” = 1 ]
-					case $tipoUser in
-						2)
-						#echo ‘mysql blabla”;;
-						3)
-						#echo ‘mysql blabla”;;
-						4)
-						#echo ‘mysql blabla”;;
-						5)
-						#echo ‘mysql blabla”;;
-					esac
+					then
 					useradd -p $contra $username
 					buscar = `cat /etc/passwd | cut -d ‘:’ -f1 | grep $username`
 					if [ "$buscar" = "$username" ]
@@ -61,7 +51,7 @@ case $tipoUser in
 					#Log
 					fi
 				fi
-
+			fi
 	else
 		echo “Ya existe un usuario con el nombre que ingreso”
 	fi;;
@@ -88,5 +78,7 @@ case $tipoUser in
 			fi
 			#Log
 		fi
-	fi
+  else
+		echo "Ya existe un usuario con ese nombre"
+	fi;;
 esac
