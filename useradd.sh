@@ -43,12 +43,22 @@ case $tipoUser in
 					then
 					useradd -p $contra $username
 					buscar = `cat /etc/passwd | cut -d ‘:’ -f1 | grep $username`
+					d=`date +%S%M%H%d%m%y`
 					if [ "$buscar" = "$username" ]
 					then
 						echo “El usuario se creo correctamente”
+						case $tipoUser in
+							2)
+							echo "Se creo el usuario ejecutivo de ventas $username de $sucursal el $d" >> /root/Userlogs;;
+							3)
+							echo "Se creo el usuario administrativo $username de $sucursal el $d" >> /root/Userlogs;;
+							4)
+							echo "Se creo el usuario gerente de sucursal $username de $sucursal el $d" >> /root/Userlogs;;
+							5)
+							echo "Se creo el usuario gerente general $username de $sucursal el $d" >> /root/Userlogs;;
+						esac
 					else
 						echo “Se produjo un error”
-					#Log
 					fi
 				fi
 			fi
@@ -73,10 +83,11 @@ case $tipoUser in
 			if [ "$buscar" = "$username" ]
 			then
 				echo “El usuario se creo correctamente”
+				d=`date +%S%M%H%d%m%y`
+				echo "Se creo el usuario cliente $username el $d" >> /root/Userlogs
 			else
 				echo “Se produjo un error al crear el usuario”
 			fi
-			#Log
 		fi
   else
 		echo "Ya existe un usuario con ese nombre"
