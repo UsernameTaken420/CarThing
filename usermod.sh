@@ -14,7 +14,7 @@ then
 			if [ "$buscar" = "$newUsername" ]
 			then
 				echo "El nombre de usuario ha sido cambiado exitosamente"
-				echo "Se cambio el nombre del usuario $username a $newUsername el $d" >> /root/Userlogs
+				echo "Se cambio el nombre del usuario $username a $newUsername el $d" >> /root/Gestionlogs
 			else
 				echo "Se produjo un error"
 			fi

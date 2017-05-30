@@ -13,7 +13,7 @@ then
 	then
 		usermod -p $clave1 $username
 		echo "La clave ha sido cambiada"
-		echo "Se cambió la clave del usuario $username el $d" >> /root/Userlogs
+		echo "Se cambió la clave del usuario $username el $d" >> /root/Gestionlogs
 	else
 		echo "Las claves no son iguales"
 	fi

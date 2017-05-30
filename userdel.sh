@@ -15,7 +15,7 @@ then
 		userdel $username
 		if [ "$buscar" != "$username"]
 			echo "Usuario eliminado correctamente"
-			echo "Se ha borrado el usuario $username el $d"
+			echo "Se ha borrado el usuario $username el $d" >> /root/Gestionlogs
 		fi
 	else
 		echo "Se produjo un error al borrar el usuario"

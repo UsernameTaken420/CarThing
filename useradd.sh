@@ -49,13 +49,13 @@ case $tipoUser in
 						echo “El usuario se creo correctamente”
 						case $tipoUser in
 							2)
-							echo "Se creo el usuario ejecutivo de ventas $username de $sucursal el $d" >> /root/Userlogs;;
+							echo "Se creo el usuario ejecutivo de ventas $username de $sucursal el $d" >> /root/Gestionlogs;;
 							3)
-							echo "Se creo el usuario administrativo $username de $sucursal el $d" >> /root/Userlogs;;
+							echo "Se creo el usuario administrativo $username de $sucursal el $d" >> /root/Gestionlogs;;
 							4)
-							echo "Se creo el usuario gerente de sucursal $username de $sucursal el $d" >> /root/Userlogs;;
+							echo "Se creo el usuario gerente de sucursal $username de $sucursal el $d" >> /root/Gestionlogs;;
 							5)
-							echo "Se creo el usuario gerente general $username de $sucursal el $d" >> /root/Userlogs;;
+							echo "Se creo el usuario gerente general $username de $sucursal el $d" >> /root/Gestionlogs;;
 						esac
 					else
 						echo “Se produjo un error”
