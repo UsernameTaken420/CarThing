@@ -1,0 +1,5 @@
+Puto el que lee
+
+la ventana Form1 habria que borrarla pero no encontre como
+y falta en la ventana main los botones de arriba(se entendio?) para 
+agregar cosas que tampoco encontre
