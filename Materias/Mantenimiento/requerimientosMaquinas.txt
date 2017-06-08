@@ -1,0 +1,32 @@
+Requerimientos de los equipos
+
+	Plan estandar - 
+		Equipos de empleados:
+			200GB de memoria
+			4GB de mememoria RAM
+			Procesador i5 Dual Core
+			Avast! Antivirus
+			Paquete Libre Office
+			Tarjeta de red inalámbrica
+			Windows 10 Enterprise
+		
+		Servidor:
+			Disco duro de 500GB 
+			Procesador de 4 núcleos
+			8GB de memoria RAM
+			OpenSSH
+			Debian 8
+	Plan premium -
+		Equipos de empleados:
+			Windows 10 Enterprise 
+			Procesador i5 Quad-core
+			Microsoft Office
+			Gabinete con puertos USB frontales
+			250GB de memoria
+
+		Servidor:
+			Disco sólido de 500GB y disco duro de 1TB
+			Procesador de 8 núcleos
+			16GB de memoria RAM
+			OpenSSH
+			Debian 8
