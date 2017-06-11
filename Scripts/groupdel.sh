@@ -10,15 +10,15 @@ else
 	buscar=`cut -d ':' -f 4 /etc/passwd | grep $IDgrupo`
 	if [ -z $buscar ]
 	then
-		buscar=`cat /etc/group | grep $IDgrupo | cut -d ':'-f 4` 
+		buscar=`cat /etc/group | grep $IDgrupo | cut -d ':'-f 4`
 		if [ -z $buscar ]
-		then	
+		then
 			groupdel $nomGrupo
 			buscar=`cut -d ":" -f 1 /etc/group | grep $nomGrupo`
 			if [ "$buscar" != "$nomGrupo" ]
 			then
 				echo "El grupo se elimino correctamente"
-				echo "Se elimino el grupo $nomGrupo el $d" >> /root/Gestionlogs
+				echo "Se elimino el grupo $nomGrupo el $d  por $USER" >> /root/Gestionlogs
 			else
 				echo "Ocurrio un error al eliminar el grupo"
 			fi
@@ -29,3 +29,4 @@ else
 		echo "No se puede eliminar el grupo $nomGrupo porque existen usuarios que lo tienen como grupo primario"
 	fi
 fi
+./mainmenu.sh

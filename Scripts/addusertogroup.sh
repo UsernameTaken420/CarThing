@@ -23,9 +23,10 @@ else
 			echo "Ha ocurrido un error al agregar el usuario al grupo"
 		else
 			echo "El usuario se agrego correctamente"
-			echo "El usuario '$userNom' se agrego al grupo '$grupoNom' el '$d'" >> /root/Gestionlogs
+			echo "El usuario '$userNom' se agrego al grupo '$grupoNom' el '$d' por '$USER'" >> /root/Gestionlogs
 		fi
 	else
 		echo "El usuario ya está en ese grupo"
 	fi
 fi
+./mainmenu.sh

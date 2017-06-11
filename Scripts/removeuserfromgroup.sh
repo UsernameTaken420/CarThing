@@ -17,7 +17,7 @@ then
     if [ -z $buscar ]
     then
       echo 'El usuario $nomUsuario se elimino correctamente del grupo $nomGrupo'
-      echo 'Se elimino al usuario $nomUsuario del grupo $nomGrupo el $d' >> /root/GestionLogs
+      echo 'Se elimino al usuario $nomUsuario del grupo $nomGrupo el $d por $USER'>> /root/GestionLogs
     else
       echo 'Ocurrio un error al eliminar el usuario del grupo'
     fi
@@ -25,3 +25,4 @@ then
 else
   echo 'No existe ningun usuario con el nombre que ingreso'
 fi
+./mainmenu.sh

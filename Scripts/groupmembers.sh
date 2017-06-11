@@ -9,7 +9,7 @@ then
   buscarEnGroup=`cat /etc/group | grep $nomGrupo | cut -d ':' -f 4`
   if [ -z $buscarEnGroup ] && [ -z $buscarEnPasswd ]
   then
-    echo 'El grupo que ingrso no tiene ningun integrante'
+    echo 'El grupo que ingreso no tiene ningun integrante'
     ./mainmenu.sh
   else
     echo 'Los integrantes de $nomGrupo son:'

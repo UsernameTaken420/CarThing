@@ -12,8 +12,9 @@ if [ "$buscar" != "$grupoNom" ]
 			echo "Ocurrio un error al crear el grupo"
 		else
 			echo "El grupo se creo correctamente"
-			echo "Se creo el grupo $grupoNom el $d" >> /root/Gestionlogs
+			echo "Se creo el grupo $grupoNom el $d por $USER" >> /root/Gestionlogs
 		fi
 	else
 		echo "Error, ya hay un grupo con ese nombre"
 fi
+./mainmenu.sh

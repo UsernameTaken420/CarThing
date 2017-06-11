@@ -56,7 +56,17 @@ do
 				echo "Esta seguro de que desea crear el usuario '$username'?"
 				echo "0- No"
 				echo "1- Si"
-				read conf
+				condicion=1
+				while [ $condicion -eq 1 ]
+				do
+					read conf
+					if [ $conf -eq 1 ] || [ $conf -eq 0 ]
+					then
+						condicion=0
+					else
+						echo "Ingrese 1 o 0 para continuar"
+					fi
+				done
 				if [ "$conf" = 1 ]
 				then
 					case $tipoUser in
@@ -77,13 +87,13 @@ do
 						echo "El usuario se creo correctamente"
 						case $tipoUser in
 							2)
-							echo "Se creo el usuario ejecutivo de ventas $username de $sucursal el $d" >> /root/Gestionlogs;;
+							echo "Se creo el usuario ejecutivo de ventas $username de $sucursal el $d por $USER" >> /root/Gestionlogs;;
 							3)
-							echo "Se creo el usuario administrativo $username de $sucursal el $d" >> /root/Gestionlogs;;
+							echo "Se creo el usuario administrativo $username de $sucursal el $d por $USER" >> /root/Gestionlogs;;
 							4)
-							echo "Se creo el usuario gerente de sucursal $username de $sucursal el $d" >> /root/Gestionlogs;;
+							echo "Se creo el usuario gerente de sucursal $username de $sucursal el $d por $USER" >> /root/Gestionlogs;;
 							5)
-							echo "Se creo el usuario gerente general $username de $sucursal el $d" >> /root/Gestionlogs;;
+							echo "Se creo el usuario gerente general $username de $sucursal el $d por $USER" >> /root/Gestionlogs;;
 						esac
 					else
 						echo "Se produjo un error"
@@ -128,7 +138,7 @@ do
 				then
 					echo "El usuario se creo correctamente"
 					d=`date +%S%M%H%d%m%y`
-					echo "Se creo el usuario cliente $username el $d" >> /root/Userlogs
+					echo "Se creo el usuario cliente $username el $d por $USER" >> /root/Userlogs
 				else
 					echo "Se produjo un error al crear el usuario"
 				fi
@@ -139,3 +149,4 @@ do
 		*) echo "Ingrese una de las opciones";;
 	esac
 done
+./mainmenu.sh
