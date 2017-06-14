@@ -34,3 +34,7 @@ C:\Users\hello\Desktop\df\WindowsApp3\WindowsApp3\obj\Debug\WindowsApp3.exe
 C:\Users\hello\Desktop\df\WindowsApp3\WindowsApp3\obj\Debug\WindowsApp3.xml
 C:\Users\hello\Desktop\df\WindowsApp3\WindowsApp3\obj\Debug\WindowsApp3.pdb
 C:\Users\hello\Desktop\df\WindowsApp3\WindowsApp3\obj\Debug\WindowsApp3.VentanaPrincipal.resources
+C:\Users\nhernandezalumnos\Desktop\Programacion\WindowsApp3\WindowsApp3\bin\Debug\WindowsApp3.exe.config
+C:\Users\nhernandezalumnos\Desktop\Programacion\WindowsApp3\WindowsApp3\obj\Debug\WindowsApp3.exe
+C:\Users\nhernandezalumnos\Desktop\Programacion\WindowsApp3\WindowsApp3\obj\Debug\WindowsApp3.xml
+C:\Users\nhernandezalumnos\Desktop\Programacion\WindowsApp3\WindowsApp3\obj\Debug\WindowsApp3.pdb
