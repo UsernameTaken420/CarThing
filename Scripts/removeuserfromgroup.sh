@@ -1,5 +1,4 @@
 #!/bin/bash
-d=`date +%S%M%H%d%m%y`
 echo 'Ingrese el nombre del usuario que desea remover del grupo'
 read nomUsuario
 buscar=`cat /etc/passwd | cut -d ':' -f 1 | grep -w $nomUsuario`
@@ -17,7 +16,8 @@ then
     if [ -z $buscar ]
     then
       echo 'El usuario $nomUsuario se elimino correctamente del grupo $nomGrupo'
-      echo 'Se elimino al usuario $nomUsuario del grupo $nomGrupo el $d por $USER'>> /root/GestionLogs
+      d=`date + '%H:%M:%S %Y-%m-%d'`
+      echo "Removido usuario '$nomUsuario' del grupo '$nomGrupo';$USER;$d" >> /SISALCA/logs
     else
       echo 'Ocurrio un error al eliminar el usuario del grupo'
     fi

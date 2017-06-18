@@ -18,25 +18,25 @@ do
 	read choice
 	case $choice in
 		1) condicion=0
-		sh useradd.sh;;
+		bash useradd.sh;;
 		2) condicion=0
-		sh userdel.sh;;
+		bash userdel.sh;;
 		3) condicion=0
-		sh usermod.sh;;
+		bash usermod.sh;;
 		4) condicion=0
-		sh passmod.sh;;
+		bash passmod.sh;;
 		5) condicion=0
-		sh groupadd.sh;;
+		bash groupadd.sh;;
 		6) condicion=0
-		sh groupdel.sh;;
+		bash groupdel.sh;;
 		7) condicion=0
-		sh addusertogroup.sh;;
+		bash addusertogroup.sh;;
 		8) condicion=0
-		sh removeuserfromgroup.sh;;
+		bash removeuserfromgroup.sh;;
   	9) condicion=0
-		sh groupmembers.sh;;
+		bash groupmembers.sh;;
 		10) condicion=0
-		sh usergroups.sh;;
+		bash usergroups.sh;;
 		0) condicion=0;;
 		*) echo "Ingrese una de las opciones";;
 	esac

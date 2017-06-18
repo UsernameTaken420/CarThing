@@ -18,7 +18,8 @@ else
 			if [ "$buscar" != "$nomGrupo" ]
 			then
 				echo "El grupo se elimino correctamente"
-				echo "Se elimino el grupo $nomGrupo el $d  por $USER" >> /root/Gestionlogs
+				d=`date + '%H:%M:%S %Y-%m-%d'`
+				echo "Eliminado grupo '$nomGrupo';$USER;$d" >> /SISALCA/logs
 			else
 				echo "Ocurrio un error al eliminar el grupo"
 			fi

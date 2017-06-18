@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "Seleccione que tipo de usuario desea crear"
-echo "1- Cliente"
+echo "1- Gerente general"
 echo "2- Ejecutivo de ventas"
 echo "3- Administrativo"
 echo "4- Gerente de sucursal"
-echo "5- Gerente general"
+echo "5- Tecnico"
 echo "0- Cancelar"
 condicion=1
 while [ $condicion -eq 1 ]
@@ -35,16 +35,16 @@ do
 					condicion=0;;
 					1)
 					condicion=0
-					sucursal = "La Paloma";;
+					sucursal = "laPaloma";;
 					2)
 					condicion=0
-					sucursal = "Punta del Este";;
+					sucursal = "puntaDelEste";;
 					3)
 					condicion=0
-					sucursal = "Tacuarembo";;
+					sucursal = "tacuarembo";;
 					4)
 					condicion=0
-					sucursal = "Colonia";;
+					sucursal = "colonia";;
 					*)
 					echo "Ingrese una de las opciones";;
 				esac
@@ -71,29 +71,34 @@ do
 				then
 					case $tipoUser in
 						2)
-						tipoUser="ejecutivo";;
+						tipoUser="ejecutivosVentas";;
 						3)
-						tipoUser="administrativo";;
+						tipoUser="administrativos"s;;
 						4)
-						tipoUser="gerenteSucursal";;
+						tipoUser="gerentesSucursal";;
 						5)
-						tipoUser="gerenteGeneral";;
+						tipoUser="tecnicos";;
 					esac
-					useradd -p $contra -g $tipoUser $username
+					if [ "$tipoUser" -eq "gerentesSucursal" ]
+					then
+						useradd -p $contra -g $tipoUser -G gerentes,$sucursal $username
+					else
+						useradd -p $contra -g $tipoUser -G $sucursal $username
+					fi
 					buscar = `cat /etc/passwd | cut -d ':' -f1 | grep $username`
-					d=`date +%S%M%H%d%m%y`
 					if [ "$buscar" = "$username" ]
 					then
 						echo "El usuario se creo correctamente"
+						d=`date + '%H:%M:%S %Y-%m-%d'`
 						case $tipoUser in
 							2)
-							echo "Se creo el usuario ejecutivo de ventas $username de $sucursal el $d por $USER" >> /root/Gestionlogs;;
+							echo "Creado el usuario ejecutivo de ventas '$username' de '$sucursal';$USER;$d" >> /SISALCA/logs;;
 							3)
-							echo "Se creo el usuario administrativo $username de $sucursal el $d por $USER" >> /root/Gestionlogs;;
+							echo "Creado el usuario administrativo '$username' de '$sucursal';$USER;$d" >> /SISALCA/logs;;
 							4)
-							echo "Se creo el usuario gerente de sucursal $username de $sucursal el $d por $USER" >> /root/Gestionlogs;;
+							echo "Creado el usuario gerente de sucursal '$username' de '$sucursal';$USER;$d" >> /SISALCA/logs;;
 							5)
-							echo "Se creo el usuario gerente general $username de $sucursal el $d por $USER" >> /root/Gestionlogs;;
+							echo "Creado el usuario gerente general '$username' de '$sucursal';$USER;$d" >> /SISALCA/logs;;
 						esac
 					else
 						echo "Se produjo un error"
@@ -131,14 +136,14 @@ do
 			if [ "$conf" = 1 ]
 			then
 				#echo “mysql wea”
-				tipoUser="cliente"
-				useradd -p $contra -g $tipoUser $username
+				tipoUser="gerentesGenerales"
+				useradd -p $contra -g $tipoUser -G gerentes $username
 				buscar=`cut -d ":" -f 1 /etc/passwd | grep $username`
 				if [ "$buscar" = "$username" ]
 				then
 					echo "El usuario se creo correctamente"
-					d=`date +%S%M%H%d%m%y`
-					echo "Se creo el usuario cliente $username el $d por $USER" >> /root/Userlogs
+					d=`date + '%H:%M:%S %Y-%m-%d'`
+					echo "Se creo el usuario gerente general '$username';$USER;$d" >> /SISALCA/logs
 				else
 					echo "Se produjo un error al crear el usuario"
 				fi

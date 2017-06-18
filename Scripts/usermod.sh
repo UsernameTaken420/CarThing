@@ -1,7 +1,6 @@
 #!/bin/bash
 echo "Ingrese el nombre de usuario anterior"
 read username
-d=`date +%S%M%H%d%m%y`
 if [ "$buscar" = "$username" ]
 then
 	echo "Ingrese el nuevo nombre del usuario"
@@ -14,7 +13,8 @@ then
 			if [ "$buscar" = "$newUsername" ]
 			then
 				echo "El nombre de usuario ha sido cambiado exitosamente"
-				echo "Se cambio el nombre del usuario '$username' a '$newUsername' el '$d' por '$USER'" >> /root/Gestionlogs
+				d=`date + '%H:%M:%S %Y-%m-%d'`
+				echo "Modificado nombre del usuario '$username' a '$newUsername';$USER;$d" >> /SISALCA/logs
 			else
 				echo "Se produjo un error"
 			fi
