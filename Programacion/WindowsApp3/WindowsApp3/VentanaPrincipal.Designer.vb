@@ -91,7 +91,9 @@ Partial Class VentanaPrincipal
         Me.ToolStripDropDownButton2 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.CrearNuevoUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CambiarContraseñaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -698,7 +700,7 @@ Partial Class VentanaPrincipal
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.ToolStripDropDownButton2})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.ToolStripDropDownButton2, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(742, 25)
@@ -742,7 +744,7 @@ Partial Class VentanaPrincipal
         'ToolStripDropDownButton2
         '
         Me.ToolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripDropDownButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearNuevoUsuarioToolStripMenuItem, Me.EliminaToolStripMenuItem, Me.CambiarContraseñaToolStripMenuItem})
+        Me.ToolStripDropDownButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearNuevoUsuarioToolStripMenuItem, Me.EliminaToolStripMenuItem})
         Me.ToolStripDropDownButton2.Image = CType(resources.GetObject("ToolStripDropDownButton2.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton2.Name = "ToolStripDropDownButton2"
@@ -758,14 +760,35 @@ Partial Class VentanaPrincipal
         'EliminaToolStripMenuItem
         '
         Me.EliminaToolStripMenuItem.Name = "EliminaToolStripMenuItem"
-        Me.EliminaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.EliminaToolStripMenuItem.Text = "Eliminar usuario"
+        Me.EliminaToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
+        Me.EliminaToolStripMenuItem.Text = "Eliminar/Modificar usuario"
         '
-        'CambiarContraseñaToolStripMenuItem
+        'ToolStripButton1
         '
-        Me.CambiarContraseñaToolStripMenuItem.Name = "CambiarContraseñaToolStripMenuItem"
-        Me.CambiarContraseñaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CambiarContraseñaToolStripMenuItem.Text = "Cambiar contraseña"
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(74, 22)
+        Me.ToolStripButton1.Text = "Transaccion"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(71, 22)
+        Me.ToolStripButton2.Text = "Estadisticas"
+        '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
+        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(111, 22)
+        Me.ToolStripButton3.Text = "Eliminar Propiedad"
         '
         'VentanaPrincipal
         '
@@ -866,5 +889,7 @@ Partial Class VentanaPrincipal
     Friend WithEvents ToolStripDropDownButton2 As ToolStripDropDownButton
     Friend WithEvents CrearNuevoUsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CambiarContraseñaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents ToolStripButton3 As ToolStripButton
 End Class
