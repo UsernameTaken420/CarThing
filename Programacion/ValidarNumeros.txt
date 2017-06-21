@@ -1,0 +1,24 @@
+Module Metodos
+    Public Function validarNumero(maximo As Integer, minimo As Integer, campo As String, valor As String) As Boolean
+        Try
+            If (Convert.ToInt32(valor) > minimo) Then
+                If (Convert.ToInt32(valor) < maximo) Then
+                    validarNumero = True
+                    Return validarNumero
+                Else
+                    MsgBox("Tiene que ingresar un numero menor a " + maximo)
+                    validarNumero = False
+                    Return validarNumero
+                End If
+            Else
+                MsgBox("Tiene que ingresar un numero mayor a " + minimo)
+                validarNumero = False
+                Return validarNumero
+            End If
+        Catch ex As Exception
+            MsgBox("Debe ingresar numeros en el campo " + campo)
+            validarNumero = False
+            Return validarNumero
+        End Try
+    End Function
+End Module
