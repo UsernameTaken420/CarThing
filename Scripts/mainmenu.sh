@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 echo "Bienvenido al menu principal de administracion de usuarios y grupos"
 echo "Seleccione que desea hacer:"
 echo "1- Crear un usuario"
