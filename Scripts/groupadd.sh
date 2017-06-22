@@ -18,7 +18,7 @@ else
 			read -p "Ocurrio un error al crear el grupo, presione enter para continuar"
 		else
 			read -p "El grupo se creo correctamente, presione enter para continuar"
-			d=`date + "%H:%M:%S %Y-%m-%d"`
+			d=`date +"%H:%M:%S %Y-%m-%d"`
 			echo "Creado grupo '$grupoNom';$usuarioActual;$d" >> /SISALCA/logs
 		fi
 	else

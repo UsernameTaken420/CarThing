@@ -29,7 +29,7 @@ else
 				read -p "Ha ocurrido un error al agregar el usuario al grupo. Presione enter para continuar"
 			else
 				read -p "El usuario se agrego correctamente. Presione enter para continuar"
-				d=`date + "%H:%M:%S %Y-%m-%d"`
+				d=`date +"%H:%M:%S %Y-%m-%d"`
 				echo "Usuario '$userNom' agregado al grupo "$grupoNom";$usuarioActual;$d" >> /SISALCA/logs
 			fi
 		else

@@ -30,7 +30,7 @@ then
 			claveEncriptada=`openssl passwd -crypt $clave1`
 			usermod -p $claveEncriptada $username
 			read -p "La clave ha sido cambiada, presione enter para continuar"
-			d=`date + "%H:%M:%S %Y-%m-%d"`
+			d=`date +"%H:%M:%S %Y-%m-%d"`
 			echo "Clave de usuario '$username' modificada;$usuarioActual;$d" >> /SISALCA/logs
 		else
 			read -p "Las claves ingresadas no coinciden, presione enter para continuar"

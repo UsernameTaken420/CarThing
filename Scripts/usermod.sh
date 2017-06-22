@@ -31,7 +31,7 @@ else
 			if [ "$buscar" = "$newUsername" ]
 			then
 				read -p "El nombre de usuario ha sido cambiado exitosamente, presione enter para continuar"
-				d=`date + "%H:%M:%S %Y-%m-%d"`
+				d=`date +"%H:%M:%S %Y-%m-%d"`
 				echo "Modificado nombre del usuario '$username' a '$newUsername';$usuarioActual;$d" >> /SISALCA/logs
 			else
 				read -p "Se produjo un error, presione enter para continuar"

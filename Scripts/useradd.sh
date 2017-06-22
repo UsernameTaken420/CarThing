@@ -3,8 +3,6 @@ clear
 usuarioActual=`logname`
 GIDgerentesGenerales=`cat /etc/group | grep "gerentesGenerales" | cut -d ":" -f 3`
 confirmarGerenteGeneral=`cat /etc/passwd |  grep $GIDgerentesGenerales | grep $usuarioActual`
-echo $usuarioActual
-echo "$confirmarGerenteGeneral"
 if [ -z "$confirmarGerenteGeneral" ]
 then
 	permisos="false"
@@ -109,7 +107,7 @@ do
 						if [ "$buscar" = "$username" ]
 						then
 							read -p "El usuario se creo correctamente, presione enter para volver al menu principal"
-							d=`date + "%H:%M:%S %Y-%m-%d"`
+							d=`date +"%H:%M:%S %Y-%m-%d"`
 							case $tipoUser in
 							"ejecutivosVentas")
 							echo "Creado el usuario ejecutivo de ventas '$username' de '$sucursal';$usuarioActual;$d" >> /SISALCA/logs;;
@@ -125,7 +123,7 @@ do
 						fi
 					fi
 				else
-					read -p "No tiene permisos para crear este usuario"
+					read -p "No tiene permisos para crear este usuario. Presione enter para volver al menu principal"
 				fi
 		fi
 	else
@@ -168,10 +166,10 @@ do
 				if [ "$buscar" = "$username" ]
 				then
 					read -p "El usuario se creo correctamente, presione enter para volver al menu principal"
-					d=`date + "%H:%M:%S %Y-%m-%d"`
+					d=`date +"%H:%M:%S %Y-%m-%d"`
 					echo "Se creo el usuario gerente general '$username';$usuarioActual;$d" >> /SISALCA/logs
 				else
-					echo "Se produjo un error al crear el usuario"
+					read -p "Se produjo un error al crear el usuario"
 				fi
 			fi
 		else
