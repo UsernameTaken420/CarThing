@@ -57,7 +57,7 @@ do
 				echo "Ingrese una de las opciones";;
 				esac
 			done
-			mismaSucursal=`cat /etc/group |  grep $sucursal | grep $USER`
+			mismaSucursal=`cat /etc/group |  grep $sucursal | grep $usuarioActual`
 			if [ -z $mismaSucursal ]
 			then
 				mismaSucursal="false"

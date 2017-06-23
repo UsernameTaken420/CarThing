@@ -10,10 +10,10 @@ else
 fi
 echo "Ingrese el nombre del usuario a ser borrado"
 read username
-sucursal1=`cat /etc/group |  grep "laPaloma" | grep $username | grep $USER`
-sucursal2=`cat /etc/group |  grep "tacuarembo" | grep $username | grep $USER`
-sucursal3=`cat /etc/group |  grep "colonia" | grep $username | grep $USER`
-sucursal4=`cat /etc/group |  grep "puntaDelEste" | grep $username | grep $USER`
+sucursal1=`cat /etc/group |  grep "laPaloma" | grep $username | grep $usuarioActual`
+sucursal2=`cat /etc/group |  grep "tacuarembo" | grep $username | grep $usuarioActual`
+sucursal3=`cat /etc/group |  grep "colonia" | grep $username | grep $usuarioActual`
+sucursal4=`cat /etc/group |  grep "puntaDelEste" | grep $username | grep $usuarioActual`
 if [ -z "$sucursal1" ] && [ -z "$sucursal2" ] && [ -z "$sucursal3" ] && [ -z "$sucursal4" ] && [ "$permisos" != "true" ]
 then
 	read -p "No tiene permisos para eliminar el usuario '$username', presione enter para continuar"
@@ -45,7 +45,7 @@ else
 				read -p "Usuario eliminado correctamente, presione enter para continuar"
 				d=`date + "%H:%M:%S %Y-%m-%d"`
 				echo "Eliminado usuario '$username';$usuarioActual;$d" >> /SISALCA/logs
-			
+
 			else
 				read -p "Se produjo un error al borrar el usuario, presione enter para continuar"
 			fi
