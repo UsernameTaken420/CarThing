@@ -1,0 +1,50 @@
+Usuarios y permisos:
+	Se creará un usuario para cada cargo de empleado debido a que la versión de MySQL utilizada no cuenta con la creación y asignación de roles para usuarios, además, se permitirá a todos los usuarios conectarse desde cualquier dirección (%) debido a que no todos los equipos contarán con direcciones IP dinámicas.
+
+	Gerente general:
+	El gerente general deberá tener los permisos requeridos para poder agregar, alterar o borrar cualquier registro en la base de datos mientras no afecte el rendimiento del programa, por lo cual no tendrá la capacidad de eliminar tablas. 
+	create user 'gerenteGeneral'@'%' identified by '5A#ykg';
+grant insert on sisalca.* to 'gerenteGeneral'@'%'; 
+grant select on sisalca.* to 'gerenteGeneral'@'%'; 
+grant delete on sisalca.* to 'gerenteGeneral'@'%'; 
+grant update on sisalca.* to 'gerenteGeneral'@'%'; 
+grant insert on sisalca.* to 'gerenteGeneral'@'%';
+	
+	Gerente de sucursal:
+	El gerente de sucursal, de manera similar al gerente general, requiere la habilidad de poder agregar, alterar o borrar cualquier registro en la base de datos mientras no afecte el rendimiento del programa.
+create user 'gerenteSucursal'@'%' identified by '7d-ECs';
+grant insert on sisalca.* to 'gerenteSucursal'@'%'; 
+grant select on sisalca.* to 'gerenteSucursal'@'%'; 
+grant delete on sisalca.* to 'gerenteSucursal'@'%'; 
+grant update on sisalca.* to 'gerenteSucursal'@'%'; 
+grant insert on sisalca.* to 'gerenteSucursal'@'%';
+	Administrativo:
+	El administrativo se encargará de ingresar en el programa todas las propiedades y compras realizadas.
+create user 'administrativo'@'%' identified by '6YP+c8';
+grant select on sisalca.* to 'administrativo'@'%';
+grant insert on sisalca.propiedad to 'administrativo'@'%';
+grant insert on sisalca.inmueble to 'administrativo'@'%';
+grant insert on sisalca.vehiculo to 'administrativo'@'%';
+grant insert on sisalca.apartamento to 'administrativo'@'%';
+grant insert on sisalca.casa to 'administrativo'@'%';
+grant insert on sisalca.compra to 'administrativo'@'%';
+grant insert on sisalca.alquilapaquete to 'administrativo'@'%';
+grant insert on sisalca.prereserva to 'administrativo'@'%';
+grant insert on sisalca.comprapaquete to 'administrativo'@'%';
+	Ejecutivo de ventas:
+El ejecutivo de ventas debe ser capaz de ingresar compras, pero no propiedades.
+create user 'ejecutivoVentas'@'%' identified by 'u!5DgA';
+grant select on sisalca.* to 'ejecutivoVentas'@'%';
+grant insert on sisalca.compra to 'ejecutivoVentas'@'%';
+grant insert on sisalca.comprapaquete to 'ejecutivoVentas'@'%';
+grant insert on sisalca.prereserva to 'ejecutivoVentas'@'%';
+grant insert on sisalca.alquilapaquete to 'ejecutivoVentas'@'%';
+	Cliente:
+	La única acción de debe poder realizar el cliente es seleccionar valores de propiedades y vehículos.
+create user 'cliente'@'%' identified by 'B6Jx#r';
+grant select on sisalca.casa to 'cliente'@'%';
+grant select on sisalca.apartamento to 'cliente'@'%';
+grant select on sisalca.vehiculo to 'cliente'@'%';
+grant select on sisalca.inmueble to 'cliente'@'%';
+grant select on sisalca.propiedad to 'cliente'@'%';
+grant select on sisalca.paquete to 'cliente'@'%';
